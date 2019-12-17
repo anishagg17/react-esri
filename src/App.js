@@ -63,7 +63,7 @@ class App extends React.Component {
 
   render() {
     if (this.state.error) {
-      return <div>{this.state.error}</div>;
+      return <div className="err">{this.state.error}</div>;
     }
     let tbd = [];
     if (this.state.data !== []) {
@@ -234,8 +234,9 @@ class App extends React.Component {
         console.log(res);
       })
       .catch(err => {
+        console.log('error msg', err.Error);
         this.setState({
-          error: err
+          error: 'Unable to fetch data .Please check your Internet Connection'
         });
         // console.log(this.state);
       });

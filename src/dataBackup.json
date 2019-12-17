@@ -1,4 +1,4 @@
-[
+const data=[
   {
     "Account No": 409000611074,
     "Date": "29 Jun 17",
@@ -1791,3 +1791,4 @@
     "Balance AMT": "14,75,632.00"
   }
 ]
+module.exports=data
