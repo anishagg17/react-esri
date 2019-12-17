@@ -1,5 +1,7 @@
 import React from 'react';
 import axios from 'axios';
+import { css } from '@emotion/core';
+import { PacmanLoader } from 'react-spinners';
 import './index.css';
 import Chart from './Chart';
 import Footer from './Footer';
@@ -13,6 +15,14 @@ const url = 'http://starlord.hackerearth.com/bankAccount';
 // Withdrawal AMT: ""
 // Deposit AMT: "10,00,000.00"
 // Balance AMT: "10,00,000.00"
+
+const override = css`
+  height: 70%;
+  position: absolute;
+  left: 35%;
+  top: 40%;
+  margin: auto;
+`;
 
 function comp(a, b) {
   a = new Date(a.Date);
@@ -62,6 +72,15 @@ class App extends React.Component {
   };
 
   render() {
+    if (this.state.loading) {
+      return (
+        <PacmanLoader
+          css={override}
+          size={120} // or 150px
+          color={'#007bff'}
+        />
+      );
+    }
     if (this.state.error) {
       return <div className="err">{this.state.error}</div>;
     }
@@ -229,6 +248,7 @@ class App extends React.Component {
         const srotedData = data.sort(comp);
         this.setState({
           data: srotedData,
+          loading: false,
           Accno: res.data[0]['Account No']
         });
         console.log(res);
@@ -236,6 +256,7 @@ class App extends React.Component {
       .catch(err => {
         console.log('error msg', err.Error);
         this.setState({
+          loading: false,
           error: 'Unable to fetch data .Please check your Internet Connection'
         });
         // console.log(this.state);
