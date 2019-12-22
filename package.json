@@ -1,6 +1,7 @@
 {
   "name": "bank",
   "version": "0.1.0",
+  "homepage": "http://anishagg17.github.io/react-esri",
   "proxy": "http://starlord.hackerearth.com",
   "private": true,
   "dependencies": {
@@ -14,6 +15,8 @@
     "react-spinners": "^0.6.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "PORT=2000 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -35,6 +38,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^2.1.1",
     "prettier": "^1.19.1"
   }
 }
