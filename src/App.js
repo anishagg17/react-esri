@@ -242,7 +242,7 @@ class App extends React.Component {
 
   componentDidMount() {
     axios
-      .get('/bankAccount')
+      .get(url)
       .then(res => {
         let { data } = res;
         const srotedData = data.sort(comp);
