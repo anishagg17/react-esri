@@ -2,7 +2,6 @@
   "name": "bank",
   "version": "0.1.0",
   "homepage": "http://anishagg17.github.io/react-esri",
-  "proxy": "http://starlord.hackerearth.com",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
