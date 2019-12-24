@@ -5,8 +5,8 @@ import { PacmanLoader } from 'react-spinners';
 import './index.css';
 import Chart from './Chart';
 import Footer from './Footer';
-const url = 'http://starlord.hackerearth.com/bankAccount';
-// 'https://cors-anywhere.herokuapp.com/http://starlord.hackerearth.com/bankAccount';
+// 'http://starlord.hackerearth.com/bankAccount';
+const url =  'https://cors-anywhere.herokuapp.com/http://starlord.hackerearth.com/bankAccount';
 
 // Account No: 409000611074
 // Date: "29 Jun 17"
