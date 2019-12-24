@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/react-esri/precache-manifest.7ac5dbf33426316bbdd9124dc1aa76a7.js"
+  "/react-esri/precache-manifest.9436dddd249cfe83c04655ec47df9b31.js"
 );
 
 self.addEventListener('message', (event) => {
